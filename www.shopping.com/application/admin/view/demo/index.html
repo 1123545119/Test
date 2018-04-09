@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF8">
+	<title>Demo</title>
+
+</head>
+<body>
+       <h1>主页面</h1>
+       	<tr>
+       		<td>姓名</td>
+       		<td>性别</td>
+       		<td>年龄</td>
+       	</tr>
+       <br/>
+  {foreach $data as $v}
+<tr>
+<td>{$v['name']}</td>
+<td>{$v['sex']}</td>
+<td>{$v['age']}</td>
+<td>
+     <a href="/Edit/{$v.id}">修改</a>
+     <a href="/Del/{$v.id}">删除</a>
+</td>
+</tr>
+       <br/>
+{/foreach}
+       </table>
+<br/>
+<div><a href="/Add">添加</a></div>
+</body>
+</html>
